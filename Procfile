@@ -1,1 +1,1 @@
-"web: arqweb" 
+"web: bin/arqweb" 
