@@ -1,1 +1,1 @@
-"web: bin/arqweb" 
+web: ./bin/api
