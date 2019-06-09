@@ -57,4 +57,4 @@
   root-package = "api"
   go-version = "go1.9.3"
   install = ["./..."]
-  ensure = "false"
+  ensure = "true"
