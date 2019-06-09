@@ -22,7 +22,7 @@ const (
 )
 
 func init() {
-	resetUserCollection() //Comment if data should be kept between program runs
+	//resetUserCollection() //Comment if data should be kept between program runs
 }
 
 type UserStorageImpl struct {

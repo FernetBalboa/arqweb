@@ -23,7 +23,7 @@ const (
 )
 
 func init() {
-	resetSuggestionCollection() //Comment if data should be kept between program runs
+	//resetSuggestionCollection() //Comment if data should be kept between program runs
 }
 
 type SuggestionStorageImpl struct {

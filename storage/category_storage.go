@@ -26,7 +26,7 @@ const (
 )
 
 func init() {
-	resetCategoryCollection() //Comment if data should be kept between program runs
+	//resetCategoryCollection() //Comment if data should be kept between program runs
 }
 
 type CategoryStorageImpl struct {
