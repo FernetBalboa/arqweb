@@ -20,7 +20,7 @@ export class EditCategoryComponent implements OnInit {
     this.searchCategoryName = '';
   }
 
-  private getCategory(): void {
+  getCategory(): void {
     this.poiService.getCategory(this.searchCategoryName).subscribe(
       (category: Category[]) => {
         this.category = category[0];
