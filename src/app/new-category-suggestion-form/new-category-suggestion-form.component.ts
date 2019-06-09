@@ -12,12 +12,12 @@ import {Location} from "@angular/common";
 })
 export class NewCategorySuggestionFormComponent implements OnInit {
 
-  private categorySuggestionFrom: FormGroup;
+  categorySuggestionForm: FormGroup;
 
   constructor(private poiService: PoiService, private location: Location) { }
 
   ngOnInit() {
-    this.categorySuggestionFrom = new FormGroup(
+    this.categorySuggestionForm = new FormGroup(
       {
         name: new FormControl('', [Validators.required, Validators.maxLength(30)]),
         hidden: new FormControl(false, [Validators.required, Validators.maxLength(30)]),
@@ -27,7 +27,7 @@ export class NewCategorySuggestionFormComponent implements OnInit {
   }
 
   onIconPickerSelect(newIcon: string): void {
-    this.categorySuggestionFrom.get("iconClass").setValue(newIcon);
+    this.categorySuggestionForm.get("iconClass").setValue(newIcon);
   }
 
   suggestNewCategory(categorySuggestionFrom: any): void {

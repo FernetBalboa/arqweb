@@ -10,8 +10,8 @@ import {MatSelectionListChange} from "@angular/material";
 })
 export class CategorySuggestionsComponent implements OnInit {
 
-  private suggestions: CategorySuggestion[];
-  private selectedSuggestions: CategorySuggestion[];
+  suggestions: CategorySuggestion[];
+  selectedSuggestions: CategorySuggestion[];
 
   constructor(private poiService: PoiService) { }
 

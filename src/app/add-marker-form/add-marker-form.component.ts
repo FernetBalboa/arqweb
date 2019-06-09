@@ -19,7 +19,7 @@ export class AddMarkerFormComponent implements OnInit {
   newPOI: PointOfInterest;
   @Output() addedPOI: EventEmitter<any> = new EventEmitter();
   @Output() cancelPOI: EventEmitter<any> = new EventEmitter();
-  private availableCategories: Category[];
+  availableCategories: Category[];
 
   private poiService: PoiService;
 

@@ -12,11 +12,11 @@ import {Category} from "../domain/category";
 })
 export class EditPoiComponent implements OnInit {
 
-  private searchPOITitle: string;
-  private availableCategories: Category[];
-  private POI: PointOfInterest;
+  searchPOITitle: string;
+  availableCategories: Category[];
+  POI: PointOfInterest;
   private POIPictureUrl;
-  private error: boolean;
+  error: boolean;
 
   constructor(private poiService: PoiService, private domSanitizer: DomSanitizer) { }
 

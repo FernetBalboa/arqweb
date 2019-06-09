@@ -51,7 +51,7 @@ export class POIFilterComponent implements OnInit {
   // }
 
   //Only emits category, but could be extended with other filters
-  private updateFilters(filtersControl: any) {
+  updateFilters(filtersControl: any) {
     this.filterChange.emit(filtersControl)
   }
 

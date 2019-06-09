@@ -172,7 +172,7 @@ export class MapComponent implements OnInit {
    *
    * @param poiFilters object with the values from {@link POIFilterComponent#filtersControl}.
    */
-  private filterPOIs(poiFilters: any) {
+  filterPOIs(poiFilters: any) {
     let category = poiFilters.category;
     let title = poiFilters.title;
     let markerLimit = 20; //Arbitrary marker limit

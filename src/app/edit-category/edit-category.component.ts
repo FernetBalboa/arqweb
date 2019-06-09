@@ -9,8 +9,8 @@ import {Category} from "../domain/category";
 })
 export class EditCategoryComponent implements OnInit {
 
-  private searchCategoryName: string;
-  private category: Category;
+  searchCategoryName: string;
+  category: Category;
   fallbackIcon: string ="fas fa-question-sign";
   icon: string;
 

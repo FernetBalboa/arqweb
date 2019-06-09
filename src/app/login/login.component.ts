@@ -11,9 +11,9 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  private loginControl: FormGroup;
-  private signUpControl: FormGroup;
-  private selectedTabIndex: number; //0 for login, 1 for signUp
+  loginControl: FormGroup;
+  signUpControl: FormGroup;
+  selectedTabIndex: number; //0 for login, 1 for signUp
 
   constructor(private loginService: LoginService, private router: Router) { }
 
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  private login(loginData: any): void {
+  login(loginData: any): void {
     this.loginService.login(new User(loginData.username, loginData.password, false))
       .subscribe(
       //Go back to map view
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  private signUp(signUpData: any): void {
+  signUp(signUpData: any): void {
     this.loginService.signUp(new User(signUpData.username, signUpData.password, false)).subscribe();
     this.selectedTabIndex = 0;
     //TODO: show user creation popup
