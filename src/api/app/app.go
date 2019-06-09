@@ -7,6 +7,7 @@ package app
 import (
 	"github.com/fernetbalboa/arqweb/src/api/config"
 	"github.com/gin-gonic/gin"
+	"os"
 )
 
 // Router is the base Gin Router used for mapping endpoints.
@@ -17,5 +18,6 @@ func Start() {
 	Router = config.ConfiguredRouter()
 	LoadEndpoints()
 
-	_ = Router.Run(":8080")
+	port := os.Getenv("PORT")
+	_ = Router.Run(":" + port)
 }
