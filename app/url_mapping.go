@@ -2,6 +2,7 @@ package app
 
 import (
 	"github.com/fernetbalboa/arqweb/controller"
+	log "github.com/sirupsen/logrus"
 )
 
 var poiController *controller.POIController
@@ -10,7 +11,7 @@ var userController *controller.UserController
 var suggestionController *controller.SuggestionController
 
 func init() {
-	/*CategoryController, err := controller.NewCategoryController()
+	CategoryController, err := controller.NewCategoryController()
 	if err != nil {
 		log.Fatalf("Could not create Category controller. Cause: %s", err.Error())
 	}
@@ -31,7 +32,7 @@ func init() {
 	poiController = POIController
 	userController = UserController
 	categoryController = CategoryController
-	suggestionController = SuggestionController*/
+	suggestionController = SuggestionController
 }
 
 // LoadEndpoints is the base function to map endpoints.
