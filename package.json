@@ -1,5 +1,5 @@
 {
-  "name": "arqweb-front",
+  "name": "arqweb-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
