@@ -38,6 +38,7 @@ func init() {
 // LoadEndpoints is the base function to map endpoints.
 func LoadEndpoints() {
 	Router.GET("/ping", controller.Ping)
+	Router.GET("/", controller.Ping)
 
 	userGroup := Router.Group("/user")
 	userGroup.POST("/signup", userController.Signup)
