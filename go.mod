@@ -1,4 +1,4 @@
-module github.com/FernetBalboa/arqweb
+module github.com/fernetbalboa/arqweb
 
 go 1.12
 
