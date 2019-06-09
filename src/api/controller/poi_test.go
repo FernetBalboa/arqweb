@@ -4,15 +4,12 @@ import (
 	"encoding/json"
 	"github.com/fernetbalboa/arqweb/src/api/config"
 	"github.com/fernetbalboa/arqweb/src/api/controller"
-	"github.com/fernetbalboa/arqweb/src/api/domain"
 	"github.com/fernetbalboa/arqweb/src/api/mock"
 	"github.com/fernetbalboa/arqweb/src/api/test"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
-	"net/url"
-	"strconv"
 	"strings"
 	"testing"
 )
@@ -71,6 +68,7 @@ func TestAddPOI(t *testing.T) {
 	})
 }
 
+/*
 func TestSearchCategory(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()
@@ -135,3 +133,4 @@ func TestSearchCategory(t *testing.T) {
 
 	})
 }
+*/

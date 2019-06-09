@@ -62,7 +62,7 @@ export class PoiService {
     }
 
     if (categoryName && !(categoryName === "Any")) {
-      queryParams = queryParams.append("categoryName", categoryName)
+      queryParams = queryParams.append("category", categoryName.toLowerCase())
     }
 
     if (bounds) {
