@@ -2,6 +2,7 @@ package app
 
 import (
 	"github.com/fernetbalboa/arqweb/controller"
+	log "github.com/sirupsen/logrus"
 )
 
 var poiController *controller.POIController
