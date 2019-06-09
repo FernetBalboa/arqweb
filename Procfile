@@ -1,1 +1,1 @@
-web: src/api/bin/api
+web: ./bin/api
