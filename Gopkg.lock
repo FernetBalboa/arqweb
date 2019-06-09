@@ -10,6 +10,14 @@
   version = "v1.1.1"
 
 [[projects]]
+  digest = "1:cc93dd54278f6c0dd4b43588b3cf2c07b09b2a6dd4e2617edf81aa8946054c1e"
+  name = "github.com/gin-contrib/cors"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "5f50d4fb4e0306dcacc6f8e9bea2dcee784dbbdf"
+  version = "v1.3.0"
+
+[[projects]]
   digest = "1:36fe9527deed01d2a317617e59304eb2c4ce9f8a24115bcc5c2e37b3aee5bae4"
   name = "github.com/gin-contrib/sse"
   packages = ["."]
@@ -259,6 +267,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/gin-contrib/cors",
     "github.com/gin-gonic/gin",
     "github.com/gin-gonic/gin/json",
     "github.com/golang/mock/gomock",

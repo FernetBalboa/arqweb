@@ -11,7 +11,6 @@ const (
 )
 
 var Scope string
-var BaseUrl string
 
 // GetScope returns the scope that will be used by the application:
 // This can be four possible values:

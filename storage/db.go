@@ -3,6 +3,7 @@ package storage
 import (
 	"context"
 	"github.com/fernetbalboa/arqweb/apierror"
+	"github.com/fernetbalboa/arqweb/config"
 	log "github.com/sirupsen/logrus"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -38,7 +39,15 @@ type ICollection interface {
 
 func getMongoDBClient() (*mongo.Client, error) {
 	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://arqweb:arqweb123@ds263146.mlab.com:63146/arqweb"))
+	var dbUri string;
+
+	if config.InDevelopment() {
+		dbUri = "mongodb://localhost:27017"
+	} else {
+		dbUri = "mongodb://arqweb:arqweb123@ds263146.mlab.com:63146/arqweb"
+	}
+
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI(dbUri))
 
 	if err != nil {
 		return nil, apierror.Wrap(err, "Could not connect to MongoDB")
