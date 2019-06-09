@@ -1,27 +1,46 @@
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
-*.so
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Folders
-_obj
-_test
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
+# dependencies
+/node_modules
 
-_testmain.go
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
 
-*.exe
-*.test
-*.prof
-.idea/
-*.pem
-vendor
-.vendor-new/
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-*.DS_Store
-src/api/api
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
