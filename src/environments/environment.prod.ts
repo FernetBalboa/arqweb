@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: "/heroku"
+  baseUrl: "https://arqweb-backend.herokuapp.com"
 };
