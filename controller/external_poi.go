@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/fernetbalboa/arqweb/src/api/apierror"
-	"github.com/fernetbalboa/arqweb/src/api/domain"
-	"github.com/fernetbalboa/arqweb/src/api/storage"
+	"github.com/fernetbalboa/arqweb/api/apierror"
+	"github.com/fernetbalboa/arqweb/api/domain"
+	"github.com/fernetbalboa/arqweb/api/storage"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	log "github.com/sirupsen/logrus"

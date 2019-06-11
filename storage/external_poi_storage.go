@@ -2,8 +2,8 @@ package storage
 
 import (
 	"context"
-	"github.com/fernetbalboa/arqweb/src/api/apierror"
-	"github.com/fernetbalboa/arqweb/src/api/domain"
+	"github.com/fernetbalboa/arqweb/api/apierror"
+	"github.com/fernetbalboa/arqweb/api/domain"
 	log "github.com/sirupsen/logrus"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
