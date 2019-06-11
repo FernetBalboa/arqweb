@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/fernetbalboa/arqweb/controller"
+	"github.com/fernetbalboa/arqweb/src/api/controller"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -9,6 +9,7 @@ var poiController *controller.POIController
 var categoryController *controller.CategoryController
 var userController *controller.UserController
 var suggestionController *controller.SuggestionController
+var externalPOIController *controller.ExternalPOIController
 
 func init() {
 	CategoryController, err := controller.NewCategoryController()
@@ -29,16 +30,20 @@ func init() {
 	if err != nil {
 		log.Fatalf("Could not create Suggestion controller. Cause: %s", err.Error())
 	}
+	ExternalPOIController, err := controller.NewExternalPOIController(CategoryController.CategoryStorage)
+	if err != nil {
+		log.Fatalf("Could not create External POI controller. Cause: %s", err.Error())
+	}
 	poiController = POIController
 	userController = UserController
 	categoryController = CategoryController
 	suggestionController = SuggestionController
+	externalPOIController = ExternalPOIController
 }
 
 // LoadEndpoints is the base function to map endpoints.
 func LoadEndpoints() {
 	Router.GET("/ping", controller.Ping)
-	Router.GET("/", controller.Ping)
 
 	userGroup := Router.Group("/user")
 	userGroup.POST("/signup", userController.Signup)
@@ -63,4 +68,12 @@ func LoadEndpoints() {
 	suggestionGroup.PUT("/:id/reject", suggestionController.RejectSuggestion)
 	suggestionGroup.GET("", suggestionController.GetSuggestions)
 
+
+	externalGroup := Router.Group("/external")
+	extPoiGroup := externalGroup.Group("/poi")
+
+	extPoiGroup.POST("", externalPOIController.AddPOI)
+	extPoiGroup.DELETE("/:id", externalPOIController.RemovePOI)
+	extPoiGroup.GET("", externalPOIController.GetPOIs)
+	extPoiGroup.GET("/:id", externalPOIController.GetPOI)
 }
