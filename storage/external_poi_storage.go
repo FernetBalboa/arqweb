@@ -24,7 +24,7 @@ const (
 )
 
 func init() {
-	resetPoiCollection() //Comment if data should be kept between program runs
+	//resetPoiCollection() //Comment if data should be kept between program runs
 }
 
 type ExternalPOIStorageImpl struct {
